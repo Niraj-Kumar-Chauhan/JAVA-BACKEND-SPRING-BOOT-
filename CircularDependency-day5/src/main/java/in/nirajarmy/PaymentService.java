@@ -1,0 +1,20 @@
+package in.nirajarmy;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PaymentService {
+
+//    @Autowired
+//    private OrderService orderService;
+
+//    public PaymentService(OrderService orderService) {
+//        this.orderService = orderService;
+//    }
+    void pay () {
+        System.out.println("Payment done");
+
+        //orderService.orderDetail();
+    }
+}
