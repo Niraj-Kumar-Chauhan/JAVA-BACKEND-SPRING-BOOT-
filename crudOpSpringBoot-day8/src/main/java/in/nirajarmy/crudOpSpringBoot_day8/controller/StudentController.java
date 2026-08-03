@@ -42,7 +42,7 @@ public class StudentController {
     }
 
     //get all student
-    @GetMapping("/getAll")
+    @GetMapping("/get-all")
     public ResponseEntity<List<Student>> getAllStudent() {
         List<Student> studentList = studentService.getAllStudent();
 
