@@ -6,6 +6,7 @@ import in.nirajarmy.spring_security_day_29.dto.UserRegisterResponseDto;
 import in.nirajarmy.spring_security_day_29.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfToken;
@@ -22,9 +23,9 @@ public class UserController {
     }
 
     @GetMapping("/hello")
-    public  String sayHello () {
+    public  String sayHello (Authentication authentication) {
 
-        return "Hello";
+        return "Hello, you are logged in as : " + authentication.getName();
     }
 
 
